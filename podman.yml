@@ -28,7 +28,7 @@
     - name: Run httpd container
       containers.podman.podman_container:
         name: apache
-        image: docker-daemon:httpd:latest
+        image: httpd:latest
         state: started
         volume:
           - "./{{ volume_path }}/:/usr/local/apache2/htdocs:z"
